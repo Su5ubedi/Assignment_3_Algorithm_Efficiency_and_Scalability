@@ -5,7 +5,7 @@ import sys
 
 sys.setrecursionlimit(1500)
 
-# Randomized Quicksort Implementation
+# Randomize Quicksort Implementation
 def randomized_partition(arr, low, high):
     pivot_index = random.randint(low, high)
     arr[high], arr[pivot_index] = arr[pivot_index], arr[high]
@@ -52,7 +52,7 @@ def time_algorithm(algorithm, arr):
 
 # Generate Arrays for Testing
 def generate_test_arrays():
-    sizes = [10, 50, 100, 500, 1000]  
+    sizes = [10, 50, 100, 500, 1000]
     test_cases = {
         "Random": [random.sample(range(10**6), size) for size in sizes],
         "Sorted": [list(range(size)) for size in sizes],
